@@ -1,0 +1,20 @@
+.MenuToggle {
+    position: absolute;
+    color: white;
+    top: 30px;
+    font-size: 38px;
+} 
+
+.MenuToggle.fa.fa-bars {
+    left: 30px;
+}
+
+.MenuToggle.fa.fa-times {
+    left: 290px;
+    color: steelblue;
+    font-size: 48px;
+}
+
+.MenuToggle.fa:hover {
+    cursor: pointer;
+}

@@ -1,0 +1,23 @@
+.QuizWrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: steelblue;
+    width: 100%;
+    height: 100vh;
+}
+
+.QuizWrapper > h1 {
+    color: white;
+    font-size: 32px;
+    padding-bottom: 12px;
+}
+
+.Quiz {
+    border: 3px solid white;
+    border-radius: 5px;
+    width: 700px;
+    padding: 14px;
+}

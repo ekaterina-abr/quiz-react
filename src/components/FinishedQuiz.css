@@ -1,0 +1,50 @@
+.FinishedQuiz ul {
+    list-style: none;
+    padding: 0;
+}
+
+.FinishedQuiz ul li {
+    font-size: 20px;
+    color: white;
+    padding: 10px;
+    margin-left: 18px;
+}
+
+.FinishedQuiz ul li i {
+    margin-left: 12px;
+    padding: 4px;
+}
+
+.FinishedQuiz .fa.fa-times-rectangle {
+    color: rgb(255, 95, 95);
+}
+
+.FinishedQuiz .fa.fa-check-square {
+    color: rgb(112, 224, 112);
+}
+
+.FinishedQuiz .summary {
+    margin-left: 28px;
+    margin-bottom: 24px;
+    color: white;
+    font-size: 20px;
+}
+
+.FinishedQuiz button {
+    margin-left: 28px;
+    height: 36px;
+    font-size: 16px;
+    padding: 6px;
+    background-color: rgb(83, 161, 255);
+    color: white;
+}
+
+.FinishedQuiz button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.FinishedQuiz .return_to_list {
+    color: white;
+    text-decoration: none;
+}

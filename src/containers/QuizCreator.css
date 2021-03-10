@@ -1,0 +1,115 @@
+.QuizCreatorWrapper{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-grow: 1;
+    background-color: steelblue;
+    width: 100%;
+    height: 100vh;
+}
+
+.QuizCreatorWrapper > h1 {
+    color: white;
+    font-size: 32px;
+    padding-bottom: 12px;
+}
+
+.QuizCreator {
+    border: 3px solid white;
+    border-radius: 5px;
+    width: 700px;
+    padding: 32px;
+    background-color: rgb(175, 175, 175);
+}
+
+.QuizCreator form {
+    display: flex;
+    flex-direction: column;
+}
+
+.QuizCreator .form_label {
+    color: black;
+    font-size: 18px;
+    margin: 12px 10px 6px;
+    font-weight: bold;
+} 
+
+.QuizCreator .form_label:nth-child(1) {
+    font-size: 22px;
+}
+
+.QuizCreator form input {
+    height: 20px;
+    margin-bottom: 8px;
+}
+
+.QuizCreator form hr {
+    color: black;
+    width: 100%;
+}
+
+.QuizCreator form h3 {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 16px 10px;
+}
+
+.QuizCreator form .add_option {
+    margin: 16px 0px;
+    width: 225px;
+}
+
+.QuizCreator form .add_option span {
+    font-size: 16px;
+}
+
+.QuizCreator form .add_option:hover {
+    cursor: pointer;
+}
+
+.QuizCreator form .buttons {
+    display: flex;
+    flex-direction: row;
+}
+
+.QuizCreator form .buttons button {
+    height: 60px;
+    margin: 16px 0px 8px 10px;
+    font-size: 14px;
+    padding: 8px;
+    font-weight: bold;
+    border-color: rgb(192, 191, 191);
+    border-radius: 5px;
+}
+
+.QuizCreator form .add_question_button {
+    background-color: rgb(247, 255, 138);
+}
+
+.QuizCreator form .create_quiz_button {
+    background-color: rgb(202, 255, 97);
+}
+
+.QuizCreator form button:hover {
+    cursor: pointer;
+}
+
+.QuizCreator form .select_right_answer {
+    display: flex;
+    flex-direction: row;
+    margin: 0;
+}
+
+.QuizCreator .fa.fa-check {
+    color: rgb(112, 224, 112);
+}
+
+.QuizCreator .question_added, .QuizCreator .quiz_added {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 157px;
+    background-color: white;
+    border-radius: 5px;
+    padding: 7px;
+}
