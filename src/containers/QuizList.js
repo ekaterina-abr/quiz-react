@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './QuizList.css'
 import { NavLink } from "react-router-dom";
+import { connect } from 'react-redux'
 
 class QuizList extends Component {
     render() {
@@ -21,4 +22,10 @@ class QuizList extends Component {
     }
 }
 
-export default QuizList
+function mapStateToProps(state) {
+    return {
+        quizes: state.quizes
+    }
+}
+
+export default connect(mapStateToProps)(QuizList)

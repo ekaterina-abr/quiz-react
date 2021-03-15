@@ -50,22 +50,14 @@ class App extends Component {
     })
   }
 
-  createQuizHandler = (quiz) => {
-    let quizes = this.state.quizes
-    quizes.push(quiz)
-    this.setState({
-      quizes
-    })
-  }
-
   render() {
     return (
       <div className="App">
         <MenuToggle isOpen={this.state.menu} onToggle={this.toggleMenuHandler} onClose={this.onCloseHandler}/>
         <Switch>
-          <Route path='/quiz/:id' render={props => <Quiz quizes={this.state.quizes} {...props}/>}/>
-          <Route path='/quiz-creator' render={props => <QuizCreator onCreate={quiz => this.createQuizHandler(quiz)} {...props}/>}/>
-          <Route exact path='/' render={props => <QuizList quizes={this.state.quizes} {...props}/>}/>
+          <Route path='/quiz/:id' component={Quiz}/>
+          <Route path='/quiz-creator' component={QuizCreator}/>
+          <Route exact path='/' component={QuizList}/>
           <Redirect to={'/'}/>
         </Switch>
       </div>

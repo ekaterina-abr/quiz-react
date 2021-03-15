@@ -1,5 +1,7 @@
 import React, {Component} from 'react'
 import './QuizCreator.css'
+import createQuiz from '../store/actions/createQuiz'
+import { connect } from 'react-redux'
 
 class QuizCreator extends Component {
     constructor(props) {
@@ -103,7 +105,7 @@ class QuizCreator extends Component {
     }
 
     onCreateQuiz = () => {
-        this.props.onCreate(this.state.quiz)
+        this.props.createQuiz(this.state.quiz)
         this.setState({
             quiz: [],
             questionItem: {
@@ -161,8 +163,8 @@ class QuizCreator extends Component {
                             
                         })}
                         <div className='buttons'>
-                            <button className='add_question_button' onClick={this.onAddCurrentQuestion}>ДОБАВИТЬ ТЕКУЩИЙ ВОПРОС</button>
-                            <button className='create_quiz_button' onClick={this.onCreateQuiz} disabled={this.state.quiz.length === 0}>СОЗДАТЬ КВИЗ</button>
+                            <button className='add_question_button' onClick={this.onAddCurrentQuestion} type='reset'>ДОБАВИТЬ ТЕКУЩИЙ ВОПРОС</button>
+                            <button className='create_quiz_button' onClick={this.onCreateQuiz} type='reset' disabled={this.state.quiz.length === 0}>СОЗДАТЬ КВИЗ</button>
                         </div>
                         {this.state.questionAdded === true ? 
                         <p className='question_added'>
@@ -181,4 +183,10 @@ class QuizCreator extends Component {
     }
 }
 
-export default QuizCreator
+function mapDispatchToProps(dispatch) {
+    return {
+        createQuiz: quiz => dispatch(createQuiz(quiz))
+    }
+}
+
+export default connect(null, mapDispatchToProps)(QuizCreator)

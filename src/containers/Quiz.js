@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import "./Quiz.css";
 import ActiveQuestion from "../components/ActiveQuestion";
 import FinishedQuiz from "../components/FinishedQuiz";
+import { connect } from "react-redux";
 
 class Quiz extends Component {
     constructor(props) {
@@ -56,4 +57,10 @@ class Quiz extends Component {
     }
 }
 
-export default Quiz
+function mapStateToProps(state) {
+    return {
+        quizes: state.quizes
+    }
+}
+
+export default connect(mapStateToProps)(Quiz)
